@@ -39,13 +39,11 @@ class NotificationTile extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: unread
-                ? RoyalColors.secondary.withValues(alpha: .08)
+                ? RoyalColors.secondary.withOpacity(0.08)
                 : RoyalColors.card,
             borderRadius: RoyalRadius.lg,
             border: Border.all(
-              color: unread
-                  ? RoyalColors.secondary
-                  : RoyalColors.border,
+              color: unread ? RoyalColors.secondary : RoyalColors.border,
             ),
             boxShadow: RoyalShadows.small,
           ),
@@ -56,7 +54,7 @@ class NotificationTile extends StatelessWidget {
                 width: 52,
                 height: 52,
                 decoration: BoxDecoration(
-                  color: RoyalColors.primary.withValues(alpha: .12),
+                  color: RoyalColors.primary.withOpacity(0.12),
                   borderRadius: RoyalRadius.md,
                 ),
                 child: Icon(
